@@ -23,12 +23,13 @@ document.getElementById("registration-form").addEventListener("submit", async fu
   // Collect form data
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
+  const idnumber = document.getElementById("idnum").value.trim();  // Fixed here
   const mobile = document.getElementById("mobile").value.trim();
   const classValue = document.getElementById("class").value;
   const section = document.getElementById("section").value;
   const termsAccepted = document.getElementById("terms").checked;
 
-  // Get selected laptop radio button value safely
+  // Get selected laptop radio button value
   const laptopInput = document.querySelector('input[name="laptop"]:checked');
   const laptop = laptopInput ? laptopInput.value : null;
 
@@ -46,6 +47,7 @@ document.getElementById("registration-form").addEventListener("submit", async fu
     await addDoc(collection(db, "registrations"), {
       name,
       email,
+      idnumber,  // Include in Firestore data
       mobile,
       class: classValue,
       section,
