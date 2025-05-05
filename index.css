@@ -31,16 +31,17 @@ nav{
     align-items: center;
     background-color: black;
     z-index: 100;
-    #club-logo{
+    #club-logo {
         display: flex;
         align-items: center;
         img{
-            height: 60px;
+            height: 50px;
             width: 60px;
-        };
+            padding:5px;
+        }
     }
     
-    .menus{
+    .menus {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
@@ -54,7 +55,7 @@ nav{
             
         }
 
-        a:hover{
+        .a:hover {
             border-bottom: 2px solid white;
         }
     
@@ -174,7 +175,7 @@ nav{
     display: flex;
     background-color: var(--g);
     justify-content: space-evenly;
-    align-items: centre;
+    align-items: center;
     padding: 5px;
 
     .html , .CSS , .JS{
@@ -218,7 +219,6 @@ nav{
             font-size: 15px;
         }
 
-      
 }
 .card:hover{
     transform: scale(1.13);
@@ -226,32 +226,44 @@ nav{
 }
 
 .contact{
+    width: 40vw;
+    height: 200px;
+    border: 2px solid var(--g);
+    margin: 0 auto;
     background-color: black;
     padding: 30px;
-    border-top: 2px solid var(--g);
+    border-radius: 10px;
+    margin-top: 100px;
+    text-align: center;
+    span{
+        color: var(--g);
+    }
     h4{
-        margin: 5px;
+        margin: 15px;
+        margin-left: 0;
         font-weight: bold;
         text-shadow:1px 0px 15px rgb(0,0,0,0.2);
-    }
+    }
 
 }
 
 #copy{
+    padding: 20px;;
     text-align: center;
-    margin: 10px;
+    margin-top: 50px;
 }
 
-@media (width<450px){
+@media (width<500px){
     .main{
-        height:400px;
+        height:300px;
         padding: 0;
         padding-top: 80px;
         padding-bottom: 80px;
         .scroll{
-            height: 400px;
+            height: 300px;
             padding: 0;
             .join-container{
+                height: 100%;
                 align-items: flex-start;
                 flex-direction: column;
                 justify-content: center;
@@ -271,11 +283,56 @@ nav{
                     }
                 }
             }
-            .img-section{
-                img{
-                    height: 400px;
+            .check-container{
+                .pop{
+                    width:300px;
                 }
-                
+
+            }
+        }
+    }
+
+    .card-container{
+        flex-direction: column;
+        gap: 18px;
+        padding: 0;
+        align-items: center;
+    }
+
+    .contact{
+        width: 80vw;
+    }
+}
+
+@media (width<360px){
+    .main{
+        height:300px;
+        padding: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .scroll{
+            height: 300px;
+            padding: 0;
+            .join-container{
+                height: 100%;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: center;
+                .join-section{
+                    width: 100%;
+                    h2{
+                        font-size: 30px;
+                        margin: 10px;
+                    }
+                    .join-p{
+                        font-size: 16px;
+                    }
+                    .join-button{
+                        margin:0 auto;
+                        margin-top: 20px;
+                        margin-bottom:40px
+                    }
+                }
             }
 
             .check-container{
@@ -290,6 +347,63 @@ nav{
     .card-container{
         flex-direction: column;
         gap: 18px;
+        padding: 0;
+        align-items: center;
     }
+
+    .contact{
+        width: 80vw;
+    }
+
 }
 
+@media (width<1000px){
+    .main{
+        height:300px;
+        padding: 0;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        .scroll{
+            height: 300px;
+            padding: 0;
+            .join-container{
+                height: 100%;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: center;
+                .join-section{
+                    width: 100%;
+                    h2{
+                        font-size: 40px;
+                        margin: 10px;
+                    }
+                    .join-p{
+                        font-size: 20px;
+                    }
+                    .join-button{
+                        margin:0 auto;
+                        margin-top: 20px;
+                        margin-bottom:40px
+                    }
+                }
+            }
+            .check-container{
+                .pop{
+                    width:300px;
+                }
+
+            }
+        }
+    }
+
+    .card-container{
+        gap: 18px;
+        align-items: center;
+    }
+
+    .contact{
+        width: 80vw;
+    }
+
+
+}

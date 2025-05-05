@@ -74,3 +74,11 @@ idButton.addEventListener('click', () => {
 });
 
 
+window.addEventListener("DOMContentLoaded", () => {
+  const idInput = document.getElementById("idnum");
+  const savedId = localStorage.getItem("idNumber");
+
+  if (savedId && idInput) {
+      idInput.value = savedId;
+  }
+});

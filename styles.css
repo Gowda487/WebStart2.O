@@ -4,8 +4,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  /* Body Styling */
+
   body {
     font-family: 'Segoe UI', sans-serif;
     background: #1d0039;
@@ -13,7 +12,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;
   }
   
  
@@ -36,6 +35,7 @@
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
     opacity: 80%;
     animation: fadeIn 0.2s ease-in-out;
+    margin:20px;
   }
   
   .form-box h2 {
@@ -43,6 +43,7 @@
     color: #fff;
     font-size: 2rem;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
   
   label {
@@ -106,7 +107,6 @@
     background-color: #a3cc00;
   }
   
-  /* Terms and Conditions Modal */
   .modal {
     display: none;
     position: fixed;
@@ -162,7 +162,7 @@
   a:hover {
     text-decoration: underline;
   }
-  /* Styling the question */
+
 p {
     color: #fff;
     font-size: 1rem;
@@ -215,7 +215,7 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.8); 
     padding: 50px;
   }
   
@@ -227,7 +227,7 @@ p {
     border-radius: 10px;
     width: 80%;
     max-width: 600px; 
-    margin: 5% auto; /* Center the modal */
+    margin: 5% auto; 
     box-shadow: 0px 0px 20px rgba(182, 104, 104, 0.3);
     position: relative;
     overflow-y: auto;
@@ -247,10 +247,9 @@ p {
   }
   
   .close:hover {
-    color: #fff; /* Change color on hover */
+    color: #fff;
   }
   
-  /* Heading inside modal */
   .modal-content h3 {
     text-align: center;
     margin-bottom: 20px;
@@ -258,24 +257,20 @@ p {
     font-weight: bold;
   }
   
-  /* Paragraph inside modal */
   .modal-content p {
     font-size: 1rem;
     margin-bottom: 20px;
   }
   
-  /* List inside modal */
   .modal-content ol {
     font-size: 1rem;
     margin-left: 20px;
   }
   
-  /* List item inside modal */
   .modal-content ol li {
     margin-bottom: 10px;
   }
   
-  /* Modal animation (fade-in effect) */
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -286,7 +281,7 @@ p {
   }
   
   .modal-content {
-    animation: fadeIn 0.5s ease-in-out; /* Add fade-in animation */
+    animation: fadeIn 0.5s ease-in-out; 
   }
   /* Small screens (phones, less than 600px) */
 @media (max-width: 600px) {
@@ -355,3 +350,19 @@ p {
     color: #333;
   }
   
+  label {
+    font-size: 18px;
+    color: white;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#idnum {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
