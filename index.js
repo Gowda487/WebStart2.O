@@ -62,7 +62,7 @@ function checkIfRegistered(id) {
     
     setTimeout(() => {
       window.location.href = 'form.html';
-    }, 1000); 
+    }, 600); 
   }
 }
 

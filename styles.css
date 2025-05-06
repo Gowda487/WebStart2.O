@@ -12,7 +12,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: hidden;
+    height: -1px;
   }
   
  
@@ -30,20 +31,23 @@
     background-color: rgba(0, 0, 0, 0.8);
     padding: 40px;
     border-radius: 10px;
-    width: 100%;
-    max-width: 450px;
+    width: 90%;
+    max-width:  500px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
     opacity: 80%;
     animation: fadeIn 0.2s ease-in-out;
-    margin:20px;
+    margin: 10px;
+    height: -2px;
+    
   }
   
   .form-box h2 {
     text-align: center;
     color: #fff;
     font-size: 2rem;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 50px;
   }
   
   label {
@@ -53,18 +57,30 @@
     display: block;
   }
   
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #fff;
-  }
+ /* Common Input & Select Field Style */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #f4f4f4;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 18px;
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+}
+
   
   input[type="radio"] {
     margin-right: 10px;
@@ -93,14 +109,15 @@
   
   button[type="submit"] {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     background-color: #d4ff00;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 1.2rem;
     color: #1d0039;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: -20px;
   }
   
   button[type="submit"]:hover {
@@ -129,7 +146,7 @@
     color: #333;
   }
   
-  .modal h3 {
+  .modal h2 {
     margin-bottom: 15px;
   }
   
@@ -250,7 +267,7 @@ p {
     color: #fff;
   }
   
-  .modal-content h3 {
+  .modal-content h2 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.5rem;
@@ -366,3 +383,4 @@ p {
     outline: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
