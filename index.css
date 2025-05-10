@@ -193,7 +193,7 @@ nav{
     margin-bottom: 20px;
     justify-content: space-evenly;
     .card{
-        display: flex;
+        display:grid;
         flex-direction: column;
         width: 300px;
         height: 200px;
@@ -296,7 +296,7 @@ nav{
     }
 
     .card-container{
-        flex-direction: column;
+        flex-direction:column;
         gap: 18px;
         padding: 0;
         align-items: center;
