@@ -1,33 +1,29 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #1d0039;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow-y: hidden;
-    height: -1px;
-  }
-  
- 
-  #vanta-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-  
- 
-  .form-box {
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #1d0039;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full height of the viewport */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+#vanta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.form-box {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 40px;
     border-radius: 10px;
@@ -38,349 +34,157 @@
     animation: fadeIn 0.2s ease-in-out;
     margin: 10px;
     height: -2px;
-    
-  }
-  
-  .form-box h2 {
-    text-align: center;
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    height: 50px;
-  }
-  
-  label {
-    color: #fff;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    display: block;
-  }
-  
- /* Common Input & Select Field Style */
+
+}
+
+.form-box h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+label {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 select {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 10px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 8px;
   border: none;
-  outline: none;
   background-color: #f4f4f4;
   color: #333;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-label {
-  font-size: 18px;
-  color: white;
-  display: block;
+.inline-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-group label,
+.inline-option {
+  color: #fff;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.checkbox-group input[type="checkbox"],
+.inline-option input[type="radio"] {
+  margin-right: 5px;
+  accent-color: #d4ff00;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  background-color: #d4ff00;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #1d0039;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #a3cc00;
+}
+
+p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
-  
-  input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  .inline-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
-  
-  .checkbox-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  
-  .checkbox-group label {
-    color: #fff;
-    font-size: 1rem;
-  }
-  
-  .checkbox-group input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  button[type="submit"] {
-    width: 100%;
-    padding: 5px;
-    background-color: #d4ff00;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    color: #1d0039;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: -20px;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #a3cc00;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 999;
-    overflow-y: auto;
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-    color: #333;
-  }
-  
-  .modal h2 {
-    margin-bottom: 15px;
-  }
-  
-  .modal ol {
-    list-style-type: decimal;
-    margin-left: 20px;
-  }
-  
-  .close {
-    color: #aaa;
-    font-size: 30px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+a {
+  color: #d4ff00;
+  text-decoration: none;
+}
 
-  a {
-    color: #d4ff00;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-p {
-    color: #fff;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-weight: 600;
-  }
-  
-  /* Inline group for radio buttons */
-  .inline-group {
-    display: flex;
-    justify-content: flex-start; 
-    gap: 10px; 
-    margin-bottom: 15px;
-  }
-  
-
-  .inline-option {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    color: #fff;
-  }
-  
-  .inline-option input[type="radio"] {
-    margin-right: 5px; 
-    accent-color: #d4ff00; 
-  }
-  
-  .inline-option label {
-    margin-left: 5px;
-    cursor: pointer;
-  }
-  
-  .inline-option input[type="radio"]:checked + label {
-    font-weight: bold;
-    color: #d4ff00; 
-  }
-  
-  .inline-group label {
-    font-size: 1rem;
-  }
- 
-  
+/* Modal – still scrolls internally if needed */
 .modal {
-    display: none; 
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); 
-    padding: 50px;
-  }
-  
-
-  .modal-content {
-    background-color: #000000;
-    color:white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px; 
-    margin: 5% auto; 
-    box-shadow: 0px 0px 20px rgba(182, 104, 104, 0.3);
-    position: relative;
-    overflow-y: auto;
-    max-height: 80vh; 
-  }
-  
-  
-  .close {
-    color: #d4ff00; 
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .close:hover {
-    color: #fff;
-  }
-  
-  .modal-content h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .modal-content p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-  
-  .modal-content ol {
-    font-size: 1rem;
-    margin-left: 20px;
-  }
-  
-  .modal-content ol li {
-    margin-bottom: 10px;
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  .modal-content {
-    animation: fadeIn 0.5s ease-in-out; 
-  }
-  /* Small screens (phones, less than 600px) */
-@media (max-width: 600px) {
-    .form-box {
-      padding: 20px;
-      width: 90%;
-    }
-  
-    .form-box h2 {
-      font-size: 1.5rem;
-    }
-  
-    label,
-    .checkbox-group label,
-    .inline-option {
-      font-size: 0.9rem;
-    }
-  
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select {
-      font-size: 0.9rem;
-      padding: 8px;
-    }
-  
-    button[type="submit"] {
-      font-size: 1rem;
-      padding: 8px;
-    }
-  
-    .modal-content {
-      width: 95%;
-      padding: 20px;
-    }
-  
-    .modal-content h3 {
-      font-size: 1.2rem;
-    }
-  
-    .modal-content p,
-    .modal-content ol {
-      font-size: 0.9rem;
-    }
-  
-    .close {
-      font-size: 24px;
-    }
-  }
-  
-  /* Medium screens (tablets, 600px–768px) */
-  @media (min-width: 601px) and (max-width: 768px) {
-    .form-box {
-      width: 80%;
-      padding: 30px;
-    }
-  
-    .modal-content {
-      width: 90%;
-    }
-  }
-  
-  #idnum {
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
-    color: #333;
-  }
-  
-  label {
-    font-size: 18px;
-    color: white;
-    display: block;
-    margin-bottom: 8px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  overflow-y: auto;
 }
 
-#idnum {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.modal-content {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  margin: 5% auto;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
 }
 
+.close {
+  color: #d4ff00;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.inline-group {
+  display: flex;
+  flex-direction: column; /* Stack the label and radio button group vertically */
+  margin-bottom: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  margin-top: 5px; /* Space between the label and the radio buttons */
+}
+
+.checkbox-group .inline-option {
+  color: #fff;
+  font-size: 14px;
+  margin-right: 15px; /* Space between radio buttons */
+}
+
+.checkbox-group input[type="radio"] {
+  margin-right: 5px;
+  accent-color: #d4ff00; /* Highlight color for the radio button */
+}

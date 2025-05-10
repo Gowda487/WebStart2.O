@@ -16,19 +16,26 @@
   <div class="form-box">
     <h2>Registration Form</h2>
     <form id="registration-form">
-      <label for="name">👤 Name</label>
+      <label for="name">Name</label>
       <input type="text" id="name" placeholder="Enter your name" required />
 
-      <label for="email">✉ Email</label>
+      <label for="email">Email</label>
       <input type="email" id="email" placeholder="Enter your email" required />
 
-      <label for="idnum">🪪 Identification Number</label>
+      <label for="idnum">Id Number</label>
       <input type="text" id="idnum" placeholder="Enter your Id Number" required />
 
-      <label for="mobile">📞 Mobile</label>
+      <label for="mobile">Mobile</label>
       <input type="tel" id="mobile" placeholder="Enter your mobile number" required />
 
-      <label for="class">🖥 Class</label>
+      <label for="class">Course</label>
+      <select id="class" required>
+        <option value="">Select your Course</option>
+        <option>Web-start</option>
+        <option>Python</option>
+      </select>
+
+      <label for="class">Class</label>
       <select id="class" required>
         <option value="">Select your class</option>
         <option>1st BCA</option>
@@ -44,12 +51,20 @@
         <option>C</option>
       </select>
 
-      <p>Do you have a laptop?</p>
       <div class="inline-group">
-        <label class="inline-option"><input type="radio" name="laptop" value="yes" required /> Yes</label>
-        <label class="inline-option"><input type="radio" name="laptop" value="no" required /> No</label>
+        <label for="yes-no">Do you have a laptop?</label>
+        <div class="checkbox-group">
+          <label class="inline-option">
+            <input type="radio" id="yes" name="laptop" value="yes">
+            Yes
+          </label>
+          <label class="inline-option">
+            <input type="radio" id="no" name="laptop" value="no">
+            No
+          </label>
+        </div>
       </div>
-
+      
       <div class="checkbox-group">
         <input type="checkbox" id="terms" required />
         <label for="terms">
@@ -89,7 +104,6 @@
       color: 0xd4ff00,
       backgroundColor: 0x0
     });
-
     function showTerms() {
       document.getElementById("termsModal").style.display = "block";
     }
