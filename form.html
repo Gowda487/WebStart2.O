@@ -24,6 +24,7 @@
 
       <label for="idnum">Id Number</label>
       <input type="text" id="idnum" placeholder="Enter your Id Number" required />
+      
 
       <label for="mobile">Mobile</label>
       <input type="tel" id="mobile" placeholder="Enter your mobile number" required />
@@ -104,11 +105,20 @@
       color: 0xd4ff00,
       backgroundColor: 0x0
     });
-    function showTerms() {
+
+   
+  window.addEventListener("DOMContentLoaded", () => {
+    const idInput = document.getElementById("idnum");
+    const savedId = localStorage.getItem("idNumber");
+    
+    if (savedId && idInput) {
+      idInput.value = savedId;
+    }
+  });
+  function showTerms() {
       document.getElementById("termsModal").style.display = "block";
     }
-
-    function hideTerms() {
+  function hideTerms() {
       document.getElementById("termsModal").style.display = "none";
     }
 
