@@ -44,28 +44,46 @@
     
     
         <div class="card-container">
-            <div class="card">
-                <h4>Duration</h4>
-                <div class="green"><img src="assets\clock-with-white-face.png" alt="" height="50px"></div>
-                <p>7 days workshop</p>
-            </div>    
-            <div class="card">
-                <h4>Scope</h4>
-                <div class="green"><img src="assets\open-book.png" alt="" height="50px"></div>
-                <p>HTML<br>CSS<br>JavaScript</p>
-            </div>    
-            <div class="card">
-                <h4>Venue</h4>
-             <div class="green"><img src="assets\location-pin.png" alt="" height="50px"></div>
-                <p>AV Room</p>
-            </div>
-            <div class="card">
-                <h4>Date & Time</h4>
-             <div class="green"><img src="assets\datetime.png" alt="" height="40px"></div>
-                <p>Monday</p>
-                <p></p>
-            </div>     
+    <div class="card">
+        <h4>Duration</h4>
+        <div class="green">
+            <img src="assets/clock-with-white-face.png" alt="Clock Icon" height="50px">
         </div>
+        <p>7 days </p>
+        <p>workshop</p>
+    </div>    
+
+    <div class="card">
+        <h4>Scope</h4>
+        <div class="green">
+            <img src="assets/open-book.png" alt="Book Icon" height="50px">
+        </div>
+        <ul class="skills">
+            <li><img src="assets/html2.png" alt="HTML Icon"> HTML</li>
+            <li><img src="assets/css3.png" alt="CSS Icon"> CSS</li>
+            <li><img src="assets/js.png" alt="JS Icon"> JavaScript</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h4>Venue</h4>
+        <div class="green">
+            <img src="assets/location-pin.png" alt="Location Icon" height="50px">
+        </div>
+        <p>AV </p>
+        <p>Room</p>
+    </div>
+
+    <div class="card">
+        <h4>Date & Time</h4>
+        <div class="green">
+            <img src="assets/datetime.png" alt="Calendar Icon" height="40px">
+        </div>
+        <p>Monday</p>
+        <p>10:00 AM - 1:00 PM</p>
+    </div>     
+</div>
+
         
     <section id="section2">
         <div class="contact">
@@ -80,6 +98,26 @@
     <script src="index.js"></script>    
     <script src="finisher-header.es5.min.js" type="text/javascript"></script>
     <script src="sample.js"></script>
+    <script>
+    // Select the card-container
+    const cardContainer = document.querySelector('.card-container');
+    
+    // Set up the observer
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add class to make it visible when in the viewport
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the container is visible
+    });
+
+    // Observe the card-container
+    observer.observe(cardContainer);
+</script>
+
 
     
 
